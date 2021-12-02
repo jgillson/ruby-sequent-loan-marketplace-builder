@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/zilverline/sequent.git
-  revision: 9c1df90900989e1667f639d4098af0145bc820bc
+  revision: e69fce62fd91e0db9283823e4d26399f3768d135
+  ref: e69fce
   specs:
     sequent (4.0.0)
       activemodel (>= 5.0, <= 6.1.4)
@@ -9,7 +10,7 @@ GIT
       i18n
       oj (~> 3)
       parallel (~> 1.20)
-      parser (>= 2.6.5, < 3.1)
+      parser (>= 2.6.5, <= 3)
       pg (~> 1.2)
       postgresql_cursor (~> 0.6)
       thread_safe (~> 0.3.6)
@@ -125,7 +126,7 @@ GEM
       racc (~> 1.4)
     oj (3.13.9)
     parallel (1.21.0)
-    parser (3.0.3.1)
+    parser (3.0.0.0)
       ast (~> 2.4.1)
     pg (1.2.3)
     postgresql_cursor (0.6.4)
