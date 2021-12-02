@@ -1,3 +1,9 @@
+require_relative "../app/sequent/projectors/loan_projector"
+require_relative "../app/sequent/projectors/marketplace_projector"
+require_relative "../app/sequent/projectors/investor_projector"
+require_relative "../app/sequent/projectors/borrower_projector"
+require_relative "../app/sequent/projectors/investor_group_projector"
+
 VIEW_SCHEMA_VERSION = 1
 
 class SequentMigrations < Sequent::Migrations::Projectors
@@ -8,7 +14,11 @@ class SequentMigrations < Sequent::Migrations::Projectors
   def self.versions
     {
       "1" => [
-        # List of migrations for version 1
+        LoanProjector,
+        MarketplaceProjector,
+        InvestorProjector,
+        BorrowerProjector,
+        InvestorGroupProjector
       ]
     }
   end
