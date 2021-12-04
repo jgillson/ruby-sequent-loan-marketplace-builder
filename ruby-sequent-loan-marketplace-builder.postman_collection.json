@@ -1,0 +1,968 @@
+{
+	"info": {
+		"_postman_id": "ea93877f-1d9a-432e-9e09-72b889ebb7f7",
+		"name": "ruby-sequent-loan-marketplace-builder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "investors",
+			"item": [
+				{
+					"name": "marketplaces",
+					"item": [
+						{
+							"name": "create_marketplace",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "The Marketplace",
+											"type": "text"
+										},
+										{
+											"key": "loan_aggregate_id",
+											"value": "e6bc804e-3fee-44bd-8633-9a47ae1455c6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_all_marketplaces",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_marketplace_by_id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces/e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces",
+										"e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_marketplace_investors",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces/e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7/investors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces",
+										"e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7",
+										"investors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_marketplace_investor_groups",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces/e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7/investor_groups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces",
+										"e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7",
+										"investor_groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_marketplace",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:9292/marketplaces/e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9292",
+									"path": [
+										"marketplaces",
+										"e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create_investor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "XYZ Bank",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A Bank",
+									"type": "text"
+								},
+								{
+									"key": "funding_amount",
+									"value": "99999.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_investors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/investors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_investor_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/investors/4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors",
+								"4aac1387-d5b0-42e3-8c39-5c82bd847d70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_investor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ABC Bank",
+									"type": "text"
+								},
+								{
+									"key": "funding_amount",
+									"value": "250000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investors/4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors",
+								"4aac1387-d5b0-42e3-8c39-5c82bd847d70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_investor_loans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/investors/4aac1387-d5b0-42e3-8c39-5c82bd847d70/loans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors",
+								"4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+								"loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_investor_groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/investors/4aac1387-d5b0-42e3-8c39-5c82bd847d70/investor_groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors",
+								"4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+								"investor_groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_investor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "49d7760d-18ef-475b-8b80-0d8e7e753f8d",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investors/4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investors",
+								"4aac1387-d5b0-42e3-8c39-5c82bd847d70"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "borrowers",
+			"item": [
+				{
+					"name": "create_borrower",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "A borrower",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Let's borrow",
+									"type": "text"
+								},
+								{
+									"key": "requested_amount",
+									"value": "5858585",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/borrowers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_borrowers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/borrowers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_borrower_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/borrowers/25d1545a-5792-45c6-82d7-e1c579d6d7aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers",
+								"25d1545a-5792-45c6-82d7-e1c579d6d7aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_borrower",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Let's borrow some cash",
+									"type": "text"
+								},
+								{
+									"key": "requested_amount",
+									"value": "300000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/borrowers/25d1545a-5792-45c6-82d7-e1c579d6d7aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers",
+								"25d1545a-5792-45c6-82d7-e1c579d6d7aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_borrower_loans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/borrowers/25d1545a-5792-45c6-82d7-e1c579d6d7aa/loans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers",
+								"25d1545a-5792-45c6-82d7-e1c579d6d7aa",
+								"loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_borrower",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/borrowers/25d1545a-5792-45c6-82d7-e1c579d6d7aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"borrowers",
+								"25d1545a-5792-45c6-82d7-e1c579d6d7aa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "investor_groups",
+			"item": [
+				{
+					"name": "create_investor_group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "The Investor Group",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A group of investors",
+									"type": "text"
+								},
+								{
+									"key": "marketplace_aggregate_id",
+									"value": "e34fcc2d-a72b-4d08-8bad-3fdf3557c0d7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_investor_group",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "The Investor Group!",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A group of investors",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/37227afa-dacc-41f2-ac95-e65b8f98ca37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"37227afa-dacc-41f2-ac95-e65b8f98ca37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_investor_groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_investor_group_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/37227afa-dacc-41f2-ac95-e65b8f98ca37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"37227afa-dacc-41f2-ac95-e65b8f98ca37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_investors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/37227afa-dacc-41f2-ac95-e65b8f98ca37/investors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"37227afa-dacc-41f2-ac95-e65b8f98ca37",
+								"investors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_investor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "investor_aggregate_id",
+									"value": "481566be-9cd2-4c3f-9aab-6661af9d476a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/37227afa-dacc-41f2-ac95-e65b8f98ca37/investor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"37227afa-dacc-41f2-ac95-e65b8f98ca37",
+								"investor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_investor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "investor_aggregate_id",
+									"value": "4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/b91dcdf1-f564-4b17-90ff-afde84cd2397/investor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"b91dcdf1-f564-4b17-90ff-afde84cd2397",
+								"investor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_investor_group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "investor_aggregate_id",
+									"value": "4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/investor_groups/b91dcdf1-f564-4b17-90ff-afde84cd2397",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"investor_groups",
+								"b91dcdf1-f564-4b17-90ff-afde84cd2397"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loans",
+			"item": [
+				{
+					"name": "create_loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Educational loan",
+									"type": "text"
+								},
+								{
+									"key": "borrower_aggregate_id",
+									"value": "25d1545a-5792-45c6-82d7-e1c579d6d7aa",
+									"type": "text"
+								},
+								{
+									"key": "investor_aggregate_id",
+									"value": "4aac1387-d5b0-42e3-8c39-5c82bd847d70",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1500000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/loans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_loan",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "An educational loan",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "300000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9292/loans/92733399-54cb-4620-80dd-cc986385f34b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans",
+								"92733399-54cb-4620-80dd-cc986385f34b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_loan_investors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/loans/92733399-54cb-4620-80dd-cc986385f34b/investor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans",
+								"92733399-54cb-4620-80dd-cc986385f34b",
+								"investor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_loan_borrowers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/loans/92733399-54cb-4620-80dd-cc986385f34b/borrower",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans",
+								"92733399-54cb-4620-80dd-cc986385f34b",
+								"borrower"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_loans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/loans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_loan_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/loans/92733399-54cb-4620-80dd-cc986385f34b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans",
+								"92733399-54cb-4620-80dd-cc986385f34b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_loan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9292/loans/92733399-54cb-4620-80dd-cc986385f34b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"loans",
+								"92733399-54cb-4620-80dd-cc986385f34b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

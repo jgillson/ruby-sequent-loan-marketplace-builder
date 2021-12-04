@@ -5,7 +5,7 @@
 class InvestorGroupAggregate < Sequent::AggregateRoot
   def initialize(command)
     super(command.aggregate_id)
-    apply InvestorGroupCreated
+    apply InvestorGroupCreated, marketplace_aggregate_id: command.marketplace_aggregate_id
     apply InvestorGroupNameUpdated, name: command.name
     apply InvestorGroupDescriptionUpdated, description: command.description
   end
@@ -18,6 +18,11 @@ class InvestorGroupAggregate < Sequent::AggregateRoot
     apply InvestorRemovedFromInvestorGroup, investor_aggregate_id: investor_aggregate_id
   end
 
+  def edit(name, description)
+    apply InvestorGroupNameUpdated, name: name
+    apply InvestorGroupDescriptionUpdated, description: description
+  end
+
   def delete
     apply InvestorGroupDeleted
   end
@@ -27,5 +32,13 @@ class InvestorGroupAggregate < Sequent::AggregateRoot
 
   on InvestorGroupDeleted do
     @deleted = true
+  end
+
+  on InvestorGroupNameUpdated do |event|
+    @name = event.name
+  end
+
+  on InvestorGroupDescriptionUpdated do |event|
+    @description = event.description
   end
 end

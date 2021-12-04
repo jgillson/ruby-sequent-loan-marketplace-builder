@@ -14,7 +14,7 @@ Sequent.configure do |config|
     BorrowerCommandHandler,
     MarketplaceCommandHandler,
     LoanCommandHandler
-  ]
+  ].map(&:new)
 
   config.event_handlers = [
     InvestorGroupProjector,
@@ -22,7 +22,7 @@ Sequent.configure do |config|
     BorrowerProjector,
     MarketplaceProjector,
     LoanProjector
-  ]
+  ].map(&:new)
 
   config.database_config_directory = "config"
   config.migration_sql_files_directory = "db/sequent"

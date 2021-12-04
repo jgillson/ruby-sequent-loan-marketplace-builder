@@ -5,6 +5,10 @@ class AddInvestorGroup < Sequent::Command
   validates_presence_of :marketplace_aggregate_id, :name, :description
 end
 
+class EditInvestorGroup < Sequent::Command
+  attrs name: String, description: String
+end
+
 class DeleteInvestorGroup < Sequent::Command
   attrs aggregate_id: String
 end

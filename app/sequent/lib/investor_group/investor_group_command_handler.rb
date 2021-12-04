@@ -7,6 +7,12 @@ class InvestorGroupCommandHandler < Sequent::CommandHandler
     repository.add_aggregate InvestorGroupAggregate.new(command)
   end
 
+  on EditInvestorGroup do |command|
+    do_with_aggregate(command, InvestorGroupAggregate) do |investor_group|
+      investor_group.edit(command.name, command.description)
+    end
+  end
+
   on DeleteInvestorGroup do |command|
     do_with_aggregate(command, InvestorGroupAggregate) do |investor_group|
       investor_group.delete

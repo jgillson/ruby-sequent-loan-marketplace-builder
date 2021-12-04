@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:11.11-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ruby_sequent_loan_marketplace_builder
+      - PG_TRUST_LOCALNET=true
+      - PGDATA=/var/lib/postgresql/data_fresh
+volumes:
+  db_data:
